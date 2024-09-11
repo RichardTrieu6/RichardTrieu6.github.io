@@ -8,7 +8,8 @@ p {
   font-weight: bold;
 }
 h1 {
-  display: inline;
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: bold;
 }
 h2 {
   display: inline;
@@ -35,11 +36,34 @@ a {
 .link {
   text-decoration: none;
   text-align: right;
+  position: relative;
+  font-weight: bold;
 }
 
-.link:hover {
-  text-decoration: underline;
+.link:hover::after {
+  opacity: 1;
 }
+
+.link:before {
+  
+}
+
+.link:after {
+  content: '';
+  height: 2px;
+  width:100%;
+  background: #7C89FF;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  opacity: 0;
+  transition: all 0.1s;
+  pointer-events: none;
+  
+}
+
+
 
 .name {
   font-size: 50px;
@@ -80,9 +104,6 @@ a {
 }
 
 .right_align {
-  margin-top: 50px;
-  margin-left: 600px;
-  margin-bottom: 75px;
   width: 1px;
   display: flex;
   flex-wrap: wrap;
@@ -97,12 +118,11 @@ a {
 }
 
 .bottom_line {
-  margin-top: 50px;
   height:7px;
   background-color:#7C89FF;
-  width: 665px; 
-  margin-left:600px;
+  width: 671px; 
   border-color:#7C89FF;
+  margin-top: 80px;
 }
 .image_container {
   display: inline-block;
@@ -118,5 +138,112 @@ a {
   display: flex;
 }
 .image_container_home {
-  display: inline-block;
+  padding-top: 30px;
+  position: absolute;
 }
+.experience_title,.about_title {
+  font-size: 25px;
+  color: #7C89FF; 
+  
+}
+
+.experience_text {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight:normal
+}
+.experience_text_title {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight:normal
+}
+
+.experience_subtext {
+  color: #868686;
+  font-size: 15px;
+  font-weight:normal
+}
+.experience_subsubtext {
+  color: #868686;
+  font-size: 14px;
+  font-weight:normal
+}
+.experience_subhead {
+  font-size: 22px;
+  position: relative;
+  text-decoration: none;
+}
+
+.experience_subhead:after {
+  content: '';
+  height: 3px;
+  width:100%;
+  background: white;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  opacity: 1;
+}
+
+
+.right_align_ex {
+  margin-left: 456px;
+  margin-bottom: 75px;
+  width: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+.container {
+  width: 35.4%;
+  margin: auto;
+  height: 100%;
+}
+.top {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.middle_title {
+  height: 20px;
+  display: flex;
+  margin-top: 20px;
+}
+.middle_desc {
+  height: 50px;
+  display: inline-block;
+  margin-top: 15px;
+  width: auto;
+}
+.middle_flex {
+  height: 30px;
+  display: flex;
+  margin-top: 15px;
+  width: auto;
+}
+
+.middle_desc_b {
+  height: 10px;
+  display: inline-block;
+  width: auto;
+}
+
+.middle_about {
+  margin-top: 20px;
+  height: 400px;
+  display: inline-block
+}
+.about_text {
+  font-weight: normal;
+}
+.bottom {
+  height: 70px;
+  display: inline-block;
+  align-items: center;
+}
+
