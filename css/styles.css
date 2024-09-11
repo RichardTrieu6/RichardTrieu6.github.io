@@ -235,11 +235,12 @@ a {
 
 .middle_about {
   margin-top: 20px;
-  height: 400px;
+  height: 300px;
   display: inline-block
 }
 .about_text {
-  font-weight: normal;
+  font-size:16px;
+  margin: 0;
 }
 .bottom {
   height: 70px;
@@ -247,3 +248,10 @@ a {
   align-items: center;
 }
 
+.connect {
+  margin: 0;
+  font-family: "Radio Canada Big", sans-serif;
+  color: rgb(226, 226, 226);
+  font-size:16px;
+  font-weight: bold;
+}
