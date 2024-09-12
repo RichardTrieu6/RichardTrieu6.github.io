@@ -258,6 +258,14 @@ a {
   font-size:16px;
   font-weight: bold;
 }
+.bottom_line_home {
+  height:7px;
+  background-color:#7C89FF;
+  width: 100%;
+  border-color:#7C89FF;
+  position:relative;
+  margin-left: 0%;
+}
 
 @media screen and (max-width: 600px) {
   .cover_image {
@@ -275,7 +283,7 @@ a {
     width: 94%
   }
   .bottom_line {
-    width: 71%;
+    width: 61%;
     margin-left: 0%;
     margin-right: 0%;
   }
