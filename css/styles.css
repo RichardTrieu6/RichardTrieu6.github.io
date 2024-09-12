@@ -1,5 +1,6 @@
 body {
   background-color: #151515;
+  overflow-x: hidden;
 }
 p {
   margin: 0;
@@ -11,26 +12,30 @@ h1 {
   font-family: "Radio Canada Big", sans-serif;
   font-weight: bold;
 }
-h2 {
-  display: inline;
-}
 a {
   color: white;
   font-size: 18px;
   font-family: "Radio Canada Big", sans-serif;
 }
+
 .htxt {
-  margin-left: 300px;
-  margin-top: 350px;
-  width: 400px;
-  display: inline-block;
+  margin-left: 31%;
+  margin-top: 37%;
+  margin-right: 0px;
+  width: 410px;
+  
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
 }
 
 .cover_image {
-  display: inline-block;
-  margin-left: 400px;
-  margin-top: 175px;
   width: 500px;
+  margin-top: 18.5%;
+  margin-left: 15%
 }
 
 .link {
@@ -44,9 +49,6 @@ a {
   opacity: 1;
 }
 
-.link:before {
-  
-}
 
 .link:after {
   content: '';
@@ -56,7 +58,7 @@ a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -1;
+  bottom: 0;
   opacity: 0;
   transition: all 0.1s;
   pointer-events: none;
@@ -120,9 +122,10 @@ a {
 .bottom_line {
   height:7px;
   background-color:#7C89FF;
-  width: 671px; 
+  width: 100%; 
   border-color:#7C89FF;
   margin-top: 80px;
+  text-align: left;
 }
 .image_container {
   display: inline-block;
@@ -138,7 +141,6 @@ a {
   display: flex;
 }
 .image_container_home {
-  padding-top: 30px;
   position: absolute;
 }
 .experience_title,.about_title {
@@ -227,7 +229,7 @@ a {
   width: auto;
 }
 
-.middle_desc_b {
+.middle_desc_b_a {
   height: 10px;
   display: inline-block;
   width: auto;
@@ -243,6 +245,7 @@ a {
   margin: 0;
 }
 .bottom {
+  width: 671px;
   height: 70px;
   display: inline-block;
   align-items: center;
@@ -254,4 +257,29 @@ a {
   color: rgb(226, 226, 226);
   font-size:16px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .cover_image {
+    display: none;
+  }
+  .intro, .name {
+    font-size: 36px;
+    
+  }
+  .htxt {
+    margin-left: 2rem;
+    margin-top: 70%;
+  }
+  .container {
+    width: 94%
+  }
+  .bottom_line {
+    width: 71%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .middle_desc_b_a {
+    margin-top: 4.8%
+  }
 }
